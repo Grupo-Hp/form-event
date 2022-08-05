@@ -1,0 +1,32 @@
+a:hover {
+    text-decoration: underline;
+}
+
+li {
+    list-style: none;
+    padding-top: 10px;
+    text-align: justify;
+}
+
+li b, a, h4 {
+    color: #cea80f;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 600px;
+    color: #fff;
+    background-image: url('https://hpcap.com.br/assets/img/fundo.png');
+    background-size: cover;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+main {
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.logo,header, footer {
+    text-align: center;
+}

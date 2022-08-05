@@ -1,0 +1,66 @@
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    li {
+        list-style: none;
+        padding-top: 10px;
+        text-align: justify;
+    }
+
+    li b,
+    a,
+    h4 {
+        color: #cea80f;
+    }
+
+    .container {
+        margin: 0 auto;
+        max-width: 600px;
+        color: #fff;
+        background-image: url('https://hpcap.com.br/assets/img/fundo.png');
+        background-size: cover;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    main {
+        padding: 10px 0;
+        text-decoration: none;
+    }
+
+    .logo,
+    header,
+    footer {
+        text-align: center;
+    }
+</style>
+
+<link rel="stylesheet" href="https://hpcap.com.br/assets/css/BannerAga.css">
+<div class="container">
+    <div class="logo">
+        <a href="https://agaempreendimentos.com.br/"><img src="https://hpcap.com.br/assets/img/logo.svg" width="60"
+                alt="Logo AGÁ"></a>
+    </div>
+    <header>
+        <h1>Nova mensagem:</h1>
+        <h4>Ficamos muito felizes pela menssagem. Isso nos mostra que nossa empresa está sendo vista.</h4>
+    </header>
+    <main>
+        <ul>
+            <li><b>Nome: </b>${req.body.nome}</li>
+            <li><b>E-mail: </b>${req.body.email}</li>
+            <li><b>Telefone: </b>${req.body.telefone}</li>
+            <li><b>Assunto: </b>${req.body.mensagem}</li>
+        </ul>
+    </main>
+    <footer>
+        <p>Em breve estaremos de volta para mais mensagens.</p>
+        <a href="https://hpcap.com.br/">Grupo HP</a>
+        <footer>
+</div>

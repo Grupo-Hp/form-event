@@ -1,0 +1,20 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  box-sizing: border-box;
+}
+
+.bannerEmail {
+  background-image: url('https://hpcap.com.br/assets/img/fundo.png');
+}
+
+.h-80vh  {
+  height: 82vh
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
