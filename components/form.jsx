@@ -1,3 +1,4 @@
+import InputMask from 'react-input-mask';
 
 const Form = () => {
 
@@ -44,7 +45,7 @@ const Form = () => {
                 </label>
                 <label>
                     <span>WhatsApp:</span>
-                    <input type="text" name="whatsapp" id="whatsapp" placeholder="Digite seu nome:" className="block my-2 border p-1 rounded-md" required />
+                    <InputMask type="text" mask="(99) 99999-9999" id="phone" name="phone" placeholder="Digite seu numero:" className="block my-2 border p-1 rounded-md" />
                 </label>
                 <label>
                     <span>Consultor(a):</span>
@@ -56,7 +57,6 @@ const Form = () => {
                         <option value='3'>Icaro</option>
                     </select>
                 </label>
-                <input onClick={handleSubmit} type="submit" value="Enviar" className="py-2 px-5 text-white bg-blue-700 rounded-md hover:bg-blue-600 cursor-pointer" />
             </form>
         </div>
     )

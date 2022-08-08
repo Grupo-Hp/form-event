@@ -4,24 +4,29 @@ const nodemailer = require("nodemailer");
 
 export default function sendMail(req, res) {
 
-  let vendedores = ['icaro.albar@live.com', 'icaro.albar@gmail.com']
+  let vendedores = [
+    { nome: "Débora Campos", email: "icaro.albar@live.com" },
+    { nome: "Icaro Albar", email: "icaro.albar@gmail.com" },
+  ]
 
   let vendedor = vendedores[req.body.consultor]
 
-  console.log(vendedor)
+  let vendedorNome = vendedor.nome
+  let vendedorEmail = vendedor.email
+
 
   let transporter = nodemailer.createTransport({
-    host: 'smtp.hostinger.com',
+    host: 'ses-smtp-user.20220719-123051',
     port: 465,
     auth: {
-      user: 'contato@astrocrypto.com.br',
-      pass: '123@Capital'
+      user: 'AKIAVCSUDXUJHCB6AZ5Z',
+      pass: 'BOlhV/qk7rV1LASh7xPds/yeWriR1zFeuPtKt5vNGeVw'
     }
   })
 
   transporter.sendMail({
-    from: "Contato Astro <contato@astrocrypto.com.br>",
-    to: `icaro.albar@hpcap.com.br, ${vendedor}`,
+    from: "Contato Grupo HP <msgsite@agaempreendimentos.com>",
+    to: `icaro.albar@hpcap.com.br, ${vendedorEmail}`,
     subject: "Mensagem do site",
     text: `${req.body.nome}`,
     html: `<style>
@@ -78,7 +83,7 @@ export default function sendMail(req, res) {
     <main>
         <ul>
             <li><b>Nome: </b>${req.body.nome}</li>
-            <li><b>E-mail: </b>${vendedor}</li>
+            <li><b>Vendedor: </b>${vendedorNome}</li>
         </ul>
     </main>
     <footer>
