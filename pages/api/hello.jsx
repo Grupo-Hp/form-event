@@ -6,7 +6,7 @@ export default function sendMail(req, res) {
 
   let vendedores = [
     { nome: "Débora Campos", email: "icaro.albar@live.com" },
-    { nome: "Icaro Albar", email: "icaro.albar@gmail.com" },
+    { nome: "Luiz Paulo", email: "" },
   ]
 
   let vendedor = vendedores[req.body.consultor]
@@ -16,16 +16,17 @@ export default function sendMail(req, res) {
 
 
   let transporter = nodemailer.createTransport({
-    host: 'ses-smtp-user.20220719-123051',
+    host: 'email-smtp.us-east-1.amazonaws.com',
     port: 465,
+    secure: true,
     auth: {
-      user: 'AKIAVCSUDXUJHCB6AZ5Z',
-      pass: 'BOlhV/qk7rV1LASh7xPds/yeWriR1zFeuPtKt5vNGeVw'
+      user: 'AKIA6JQEFCPPAZGMEHF6',
+      pass: 'BEtrjzS6npEP3WhEu5yqtTekyRsLGC4JQmPCU3xspHWc'
     }
   })
 
   transporter.sendMail({
-    from: "Contato Grupo HP <msgsite@agaempreendimentos.com>",
+    from: "Contato Grupo HP <icaro.albar@gmail.com>",
     to: `icaro.albar@hpcap.com.br, ${vendedorEmail}`,
     subject: "Mensagem do site",
     text: `${req.body.nome}`,
@@ -33,7 +34,7 @@ export default function sendMail(req, res) {
     a {
         text-decoration: none;
     }
-
+    
     a:hover {
         text-decoration: underline;
     }
@@ -83,7 +84,11 @@ export default function sendMail(req, res) {
     <main>
         <ul>
             <li><b>Nome: </b>${req.body.nome}</li>
+            <li><b>E-mail: </b>${req.body.email}</li>
+            <li><b>WhatsApp: </b>${req.body.whatsapp}</li>
+            <li><b>Interesse: </b>${req.body.produtos}</li>
             <li><b>Vendedor: </b>${vendedorNome}</li>
+            <li><b>Observação: </b>${req.body.obsevacao}</li>
         </ul>
     </main>
     <footer>
