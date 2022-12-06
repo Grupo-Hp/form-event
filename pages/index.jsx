@@ -12,6 +12,7 @@ export default function Home() {
         <link rel="icon" href="images/favicon.png" />
       </Head>
       <Nav />
+      tste
       <Form />
     </>
   )
